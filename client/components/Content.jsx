@@ -1,7 +1,7 @@
 import React from "react";
 
-import Code from "./Code";
-import SideBar from "./SideBar";
+import Code from "./Code.jsx";
+import SideBar from "./SideBar.jsx";
 
 import "../style/content.css";
 

@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 
-import NavBar from './NavBar.js';
-import Main from './Main.js';
-import Content from './Content.js';
+import NavBar from './NavBar.jsx';
+import Main from './Main.jsx';
+import Content from './Content.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

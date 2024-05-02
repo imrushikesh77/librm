@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import dotenv from "dotenv";
 dotenv.config();
 
-import TitleCard from "./TitleCard";
+import TitleCard from "./TitleCard.jsx";
 
 import "../style/main.css";
 

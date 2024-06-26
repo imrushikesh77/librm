@@ -1,0 +1,83 @@
+.add-snippet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #050523;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.add-snippet-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f8f8f8;
+}
+
+.add-snippet-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.add-snippet-form label {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #cfcfcf;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.add-snippet-form input[type="text"],
+.add-snippet-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #292d63;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.add-snippet-form input[type="text"]:focus,
+.add-snippet-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    background-color: #35397a;
+}
+
+.add-snippet-form textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+.add-snippet-form button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #3b3f7c;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.add-snippet-form button:hover {
+    background-color: #5054a6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-snippet-form button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}

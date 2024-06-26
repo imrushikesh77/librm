@@ -1,27 +1,33 @@
 import React, { useState, useEffect } from "react";
-import dotenv from "dotenv";
-dotenv.config();
+import { useDispatch } from 'react-redux';
+import { setSearchResults, clearSearchResults } from '../features/title/titleSlice.js';
+
 
 const API_URI = process.env.SEARCH_TITLE_URL;
 
 const SearchBar = () => {
     const [searchTerm, setSearchTerm] = useState("");
+    const dispatch = useDispatch();
+
     useEffect(() => {
-        const delayDebounceFn = setTimeout(() => {
+        const delayDebounceFn = setTimeout(async() => {
             if (searchTerm.trim() !== "") {
-                fetch(`${API_URI}/${searchTerm}`)
+                await fetch(`${API_URI}/${searchTerm}`)
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data);
+                        dispatch(setSearchResults(data));
+                        // console.log(data);
                     })
                     .catch(error => {
                         console.error("Error fetching data:", error);
                     });
+            } else {
+                dispatch(clearSearchResults());
             }
         }, 300);
 
         return () => clearTimeout(delayDebounceFn);
-    }, [searchTerm]);
+    }, [searchTerm, dispatch]);
 
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);

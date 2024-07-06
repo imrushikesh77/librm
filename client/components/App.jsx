@@ -7,7 +7,6 @@ import NavBar from './NavBar.jsx';
 import Main from './Main.jsx';
 import Content from './Content.jsx';
 import AddSnippet from './AddSnippet.jsx';
-import { Analytics } from '@vercel/analytics/react';
 
 function ContentWithId() {
     const { id } = useParams();
@@ -25,7 +24,6 @@ root.render(
                     <Route path="/content/:id" element={<ContentWithId />} />
                     <Route path='/add' element={<AddSnippet />} />
                 </Routes>
-                <Analytics />
             </BrowserRouter>
         </Provider>
     </React.StrictMode>
